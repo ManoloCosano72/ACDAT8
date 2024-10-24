@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -37,7 +38,7 @@ public class LoginController extends Controller implements Initializable {
 
     }
     @FXML
-    private void returnButton() throws Exception {
-        App.currentController.changeScene(Scenes.MAIN, null);
+    private void returnButton() throws IOException {
+        App.setRoot("");
     }
 }
