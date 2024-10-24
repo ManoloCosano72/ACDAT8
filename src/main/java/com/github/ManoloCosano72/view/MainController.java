@@ -8,10 +8,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class MainController extends Controller implements Initializable {
+public class MainController{
     @FXML
     private AnchorPane anchorPane;
     @FXML
@@ -21,27 +19,13 @@ public class MainController extends Controller implements Initializable {
     @FXML
     private ImageView exitButton;
 
-    @Override
-    public void onOpen(Object input) throws Exception {
-
-    }
-
-    @Override
-    public void onClose(Object output) {
-
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
     @FXML
     private void goToRegistrer() throws IOException {
-        App.setRoot("");
+        App.setRoot("registrer");
     }
     @FXML
     private void goToLogin() throws IOException {
-        App.setRoot("");
+        App.setRoot("login");
     }
     @FXML
     private void closeApp() {

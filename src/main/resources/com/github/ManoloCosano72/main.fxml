@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ManoloCosano72.view.MainController">
+   <children>
+      <Text layoutX="155.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHAT MANOLO">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Button fx:id="registrerButton" layoutX="203.0" layoutY="297.0" mnemonicParsing="false" onAction="#goToRegistrer" prefHeight="48.0" prefWidth="114.0" text="REGISTRARSE" />
+      <ImageView fx:id="exitButton" fitHeight="84.0" fitWidth="73.0" layoutX="47.0" layoutY="284.0" onMouseClicked="#closeApp" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../IconsImages/exit.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="loginButton" layoutX="408.0" layoutY="297.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="48.0" prefWidth="114.0" text="INICIAR SESION" />
+      <ImageView fitHeight="201.0" fitWidth="220.0" layoutX="197.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../IconsImages/_b67983dc-4b05-47e2-804a-9ea674adb949.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>

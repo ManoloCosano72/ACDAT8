@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LoginController extends Controller implements Initializable {
+public class LoginController implements Initializable {
     @FXML
     private AnchorPane anchorPane;
     @FXML
@@ -23,15 +23,7 @@ public class LoginController extends Controller implements Initializable {
     private TextField fieldPassword;
     @FXML
     private ImageView returnButton;
-    @Override
-    public void onOpen(Object input) throws Exception {
 
-    }
-
-    @Override
-    public void onClose(Object output) {
-
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -39,6 +31,6 @@ public class LoginController extends Controller implements Initializable {
     }
     @FXML
     private void returnButton() throws IOException {
-        App.setRoot("");
+        App.setRoot("main");
     }
 }
