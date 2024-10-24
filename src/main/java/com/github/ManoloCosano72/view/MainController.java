@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -35,12 +36,12 @@ public class MainController extends Controller implements Initializable {
 
     }
     @FXML
-    private void goToRegistrer() throws Exception {
-        App.currentController.changeScene(Scenes.REGISTRER,null);
+    private void goToRegistrer() throws IOException {
+        App.setRoot("");
     }
     @FXML
-    private void goToLogin() throws Exception {
-        App.currentController.changeScene(Scenes.LOGIN,null);
+    private void goToLogin() throws IOException {
+        App.setRoot("");
     }
     @FXML
     private void closeApp() {

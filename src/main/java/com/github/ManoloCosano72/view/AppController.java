@@ -34,7 +34,7 @@ public class AppController extends Controller implements Initializable {
         this.centerController = view.controller;
         this.centerController.onOpen(data);
     }
-    public void openModal(Scenes scene, String title, Controller parent, Object data) throws Exception {
+    /*public void openModal(Scenes scene, String title, Controller parent, Object data) throws Exception {
         View view = loadFXML(scene);
         Stage stage = new Stage();
         stage.setTitle(title);
@@ -45,6 +45,7 @@ public class AppController extends Controller implements Initializable {
         view.controller.onOpen(parent);
         stage.showAndWait();
     }
+     */
     @Override
     public void onOpen(Object input) throws Exception {
         changeScene(Scenes.MAIN, null);
