@@ -61,6 +61,10 @@ public class Message {
         this.recipient = recipient;
     }
 
+    public String toCSV (){
+        return id + ", " + text + ", " + sendDate + ", " + sender + ", " + recipient;
+    }
+
     @Override
     public boolean equals(Object obj) {
         boolean isEquals;

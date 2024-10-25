@@ -1,9 +1,14 @@
 package com.github.ManoloCosano72.model.entity;
 
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class User {
+    private static List<User> users = new ArrayList<>();
     private String name;
     private String password;
     private String mail;
@@ -14,6 +19,10 @@ public class User {
         this.password = password;
         this.mail = mail;
         this.messages = messages;
+    }
+
+    public User() {
+
     }
 
     public String getName() {
@@ -48,6 +57,30 @@ public class User {
         this.messages = messages;
     }
 
+    public static List<User> getUsers() {
+        return users;
+    }
+
+    public static void setUsers(List<User> users) {
+        User.users = users;
+    }
+
+    public static boolean validateMail(String mail) {
+        boolean validateResult;
+        Pattern mailPattern = Pattern.compile("[A-Za-z0-9]+@+(gmail|outlook|hotmail)\\.(com|es)");
+        Matcher mailMatcher = mailPattern.matcher(mail);
+        if (mailMatcher.matches()) {
+            validateResult = true;
+        } else {
+            validateResult = false;
+        }
+        return validateResult;
+    }
+    public static void addUser(User user) {
+        users.add(user);
+    }
+
+
     @Override
     public boolean equals(Object obj) {
         boolean isEquals;
@@ -75,4 +108,5 @@ public class User {
                 ", mail='" + mail + '\'' +
                 '}';
     }
+
 }
